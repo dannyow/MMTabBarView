@@ -53,7 +53,7 @@ FOUNDATION_EXPORT const unsigned char MMTabBarViewVersionString[];
 @protocol MMTabStyle;
 @protocol MMTabBarViewDelegate;
 
-@interface MMTabBarView : NSView <NSDraggingSource, NSDraggingDestination, NSAnimationDelegate>
+@interface MMTabBarView : NSView <NSDraggingSource, NSDraggingDestination, NSAnimationDelegate, NSTabViewDelegate>
 
 #pragma mark Basics
 

@@ -1098,6 +1098,11 @@ static NSMutableDictionary *registeredStyleClasses = nil;
         
         _tabView = view;
         
+        if (nil != view.delegate && self != view.delegate) {
+            NSLog(@"Warning: The given tableView.delegate is not empty, and will be replaced...");
+        }
+        _tabView.delegate = self;
+        
         // build buttons from existing tab view items
         for (NSTabViewItem *item in [_tabView tabViewItems]) {
             if (![[self visibleTabViewItems] containsObject:item]) {
